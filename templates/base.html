@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Productos</title>
+</head>
+<body>
+
+	<H1>PRODUCTOS</H1>
+	<ul>
+		<li>
+			<a href="{% url 'marca-list' %}">
+				marca	
+			</a>
+			
+		</li>
+		<li>
+			<a href="{% url 'zapato-list' %}">
+				zapato	
+			</a>
+		</li>
+	</ul>
+	<HR>
+	<div>
+		{% block section %}
+		{% endblock section %}
+	</div>
+
+	<div>
+		{% block maincontent %}
+		{% endblock maincontent %}
+	</div>
+
+</body>
+</html>
