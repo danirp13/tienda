@@ -5,4 +5,5 @@ from django.contrib import admin
 urlpatterns = [
 url(r'^productos/',include('productos.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'', include('social_django.urls', namespace='social'))
 ]

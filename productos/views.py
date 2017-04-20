@@ -2,10 +2,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from productos.models import Marca, Zapato
-from django.views.generic import ListView, DetailView 
+from django.views.generic import ListView, DetailView, TemplateView 
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
+
+
 # Create your views here.
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
 class ZapatoUpdate(UpdateView):
 	model=Zapato

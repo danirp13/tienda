@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_adminlte',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'productos',
+    'productos',     
+    'social.apps.django_app.default',
+
 ]
 
 MIDDLEWARE = [
@@ -124,3 +127,19 @@ MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'media'),
     )
+
+AUTHENTICATION_BACKENDS = (
+
+    'social.backends.facebook.FacebookAppOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.twitter.TwitterOAuth'
+    'django.contrib.auth.backends.ModelBackend'
+    )
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_TWITTER_KEY= ''
+SOCIAL_AUTH_TWITTER_SECRET= ''
+
+SOCIAL_AUTH_FACEBOOK_KEY= ''
+SOCIAL_AUTH_FACEBOOK_SECRET= ''
