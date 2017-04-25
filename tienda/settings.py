@@ -130,16 +130,17 @@ STATICFILES_DIRS=(
 
 AUTHENTICATION_BACKENDS = (
 
-    'social.backends.facebook.FacebookAppOAuth2',
-    'social.backends.facebook.FacebookOAuth2',
-    'social.backends.twitter.TwitterOAuth'
+    'social_auth.backends.facebook.FacebookBackend',
+    #'social.backends.facebook.FacebookAppOAuth2',
+    #'social.backends.facebook.FacebookOAuth2',
+    'social.backends.twitter.twitter-oauth'
     'django.contrib.auth.backends.ModelBackend'
     )
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 
-SOCIAL_AUTH_TWITTER_KEY= ''
-SOCIAL_AUTH_TWITTER_SECRET= ''
+SOCIAL_AUTH_TWITTER_KEY= 'YbxUyizOC3uuHQqPqAjoL4UXZ'
+SOCIAL_AUTH_TWITTER_SECRET= 'ly82lTH7ME4SkxJvVpwyZVEH8xChDZRRAP4UQMYkyhXAO3Xcgk'
 
-SOCIAL_AUTH_FACEBOOK_KEY= ''
-SOCIAL_AUTH_FACEBOOK_SECRET= ''
+SOCIAL_AUTH_FACEBOOK_KEY= '1873718962866952'
+SOCIAL_AUTH_FACEBOOK_SECRET= 'cbf6d50d0811733f3f29bb8becfb51b4'
